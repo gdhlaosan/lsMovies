@@ -26,5 +26,3 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
-
-// 真是分

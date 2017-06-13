@@ -1,6 +1,5 @@
 <template>
 <div>
-
     <router-view name="Header"></router-view> 
     <router-view name="Swipe"></router-view>
     <router-view name="Coming"></router-view>
@@ -8,7 +7,6 @@
     <router-view name="Usbox"></router-view>
     <router-view name="Top"></router-view>
     <router-view></router-view>
-    <p id="bottom">—————— 我也是有底线的 ——————</p>
 </div>
 </template>
 
@@ -26,11 +24,5 @@ export default {
 html{
   font-size: 15.625vw;
 }
-#bottom{
-  font-size: 0.1rem;
-  text-align: center;
-  width: 100%;
-  color: #dcdcdc;
-  padding: 1rem 0 .5rem 0;
-}
+
 </style>

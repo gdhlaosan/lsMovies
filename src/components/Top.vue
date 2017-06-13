@@ -13,6 +13,7 @@
         </div>
       </div>
     </div>
+    <p id="bottom">—————— 我也是有底线的 ——————</p>
  </div>
 </template>
 
@@ -86,5 +87,12 @@ export default {
 #top .smallFont{
   font-size: 0.1rem;
   color: gray;
+}
+#bottom{
+  font-size: 0.1rem;
+  text-align: center;
+  width: 100%;
+  color: #dcdcdc;
+  padding: 1rem 0 .5rem 0;
 }
 </style>
