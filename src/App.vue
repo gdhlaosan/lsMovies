@@ -1,8 +1,15 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+<div>
+
+    <router-view name="Header"></router-view> 
+    <router-view name="Swipe"></router-view>
+    <router-view name="Coming"></router-view>
+    <router-view name="Theater"></router-view>
+    <router-view name="Usbox"></router-view>
+    <router-view name="Top"></router-view>
     <router-view></router-view>
-  </div>
+    <p id="bottom">—————— 我也是有底线的 ——————</p>
+</div>
 </template>
 
 <script>
@@ -12,12 +19,18 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 15.625vw;
+}
+#bottom{
+  font-size: 0.1rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  color: #dcdcdc;
+  padding: 1rem 0 .5rem 0;
 }
 </style>
