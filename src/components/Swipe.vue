@@ -42,7 +42,7 @@ export default {
 		  this.arrth = Array.prototype.slice.call(response.data.subjects);
 		  // return response.data.subjects;
 		  // return arrth
-		  console.log(this.arrth)
+		  // console.log(this.arrth)
 		})
 		// .then((data)=>{
 		// 	console.log(data)
