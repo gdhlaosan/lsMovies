@@ -27,7 +27,7 @@ export default {
   created(){
     var url  = "../../static/Us_box.json"
     Vue.axios.get(url).then((response) => {
-      console.log(response.data.subjects)
+      // console.log(response.data.subjects)
       return response.data.subjects;
     }).then((data)=>{
       var arr = Array.prototype.slice.call(data);
@@ -35,9 +35,8 @@ export default {
       for(var i=0, len=arr.length; i<8; i++){
         newArr.push(arr[i]);
       }
-
       this.arrusbox = newArr;
-      console.log(this.arrusbox)
+      // console.log(this.arrusbox)
     })
   }
 }
