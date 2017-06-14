@@ -1,8 +1,8 @@
 <template>
 <div>
     <router-view name="Header"></router-view>
-    <!-- <router-view name="Details01" :pass-data="obj"></router-view> -->
-    <div>{{obj.title}}</div>
+    <router-view name="Details01" :pass-data="obj"></router-view>
+    <router-view name="Introduce" :pass-data="obj"></router-view>
 </div>
 </template>
 
@@ -18,27 +18,26 @@ export default {
     }
   },
   created(){
-    //console.log(this.$route.params.id)
     this.id = this.$route.params.id;
-    //var url = "https://api.douban.com/v2/movie/subject/"+this.id;
-    var url = "../../static/20451290.json"
+    var url = "https://api.douban.com/v2/movie/subject/"+this.id;
+    //var url = "../../static/20451290.json"
     //console.log(url)
-    // jsonp(url,null,(err,data)=>{
-    //   if(err){
-    //     console.error(err.message);
-    //   }else{
-    //    console.log(data)
-    //    this.obj = data;
-    //    //console.log(this.obj)  
-    //   }
-    // })
-    Vue.axios.get(url).then((res) => {
-      //console.log(res.data) 
-      return res.data
-    }).then((data)=>{
-      console.log(data)
-      this.obj = data
+    jsonp(url,null,(err,data)=>{
+      if(err){
+        console.error(err.message);
+      }else{
+       console.log(data)
+       this.obj = data;
+       //console.log(this.obj)  
+      }
     })
+    // Vue.axios.get(url).then((res) => {
+    //   //console.log(res.data) 
+    //   return res.data
+    // }).then((data)=>{
+    //   console.log(data)
+    //   this.obj = data
+    // })
   }
 }
 

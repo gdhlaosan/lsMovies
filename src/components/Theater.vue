@@ -2,11 +2,7 @@
  <div id="theater">
     <div id="title">
       <h3>影院热映</h3>
-      <h4>
-        <router-view to="">
-          更多
-        </router-view>
-      </h4>
+      <h4>更多</h4>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">

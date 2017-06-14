@@ -9,6 +9,7 @@ import Coming from '@/components/Coming'
 import Usbox from '@/components/Usbox'
 import Details from "@/components/Details"
 import Details01 from "@/components/Details01"
+import Introduce from "@/components/Introduce"
 
 
 Vue.use(Router)
@@ -40,7 +41,7 @@ export default new Router({
       children:[
         {
           path:"",
-          components:{Header,Details01}
+          components:{Header,Details01,Introduce}
         }
 
       ]
