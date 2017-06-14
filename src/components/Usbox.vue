@@ -6,10 +6,9 @@
   </div>
   <ul>
     <li v-for="item in arrusbox">
-      <img :src="item.subject.images.small" :alt="item.subject.alt">
-      <p>{{ item.subject.title }}</p>
-      <!-- 未上映模块，没有评分 -->
-      <p class="smallFont">评分：{{ item.subject.rating.average }}分</p>
+      <router-link :to="{name:'Details',params:{id:item.id}}"><img :src="item.images.small" :alt="item.alt"></router-link>
+      <p>{{ item.title }}</p>
+      <p class="smallFont">评分：{{ item.rating.average }}分</p>
     </li>
   </ul>
 </div>
@@ -33,7 +32,7 @@ export default {
       var arr = Array.prototype.slice.call(data);
       var newArr = []
       for(var i=0, len=arr.length; i<8; i++){
-        newArr.push(arr[i]);
+        newArr.push(arr[i].subject);
       }
       this.arrusbox = newArr;
       // console.log(this.arrusbox)

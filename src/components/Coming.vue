@@ -6,7 +6,7 @@
   </div>
   <ul>
     <li v-for="item in arrcoming">
-      <img :src="item.images.small" :alt="item.alt">
+      <router-link :to="{name:'Details', params:{id:item.id}}"><img :src="item.images.small" :alt="item.alt"></router-link>
       <p>{{ item.title }}</p>
       <!-- 未上映模块，没有评分 -->
       <p class="smallFont">暂无评分</p>
