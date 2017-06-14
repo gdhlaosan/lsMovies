@@ -47,7 +47,7 @@ export default {
 			var arr = Array.prototype.slice.call(data);
 			var newArr = []
 			for(var i=0, len=arr.length; i<len; i++){
-				newArr.push(arr[i].images.medium);
+				newArr.push(arr[i].images.large);
 			}
 			// newArr = Array.prototype.slice.call(newArr);
 			this.arrth = newArr;
