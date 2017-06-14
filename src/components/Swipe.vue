@@ -2,21 +2,20 @@
 <div id="myswipe">
   <mt-swipe :auto="3000" :show-indicators="false">
 	  <mt-swipe-item>
-		<a href=""><img :src="arrth[0]"></a>
-		<a href=""><img :src="arrth[1]"></a>
-		<a href=""><img :src="arrth[2]"></a>
+		<router-link :to="{ name: 'Details', params: { id: arrth[0].id }}"><img :src="arrth[0].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[1].id }}"><img :src="arrth[1].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[2].id }}"><img :src="arrth[2].images.large"></router-link>
 	  </mt-swipe-item>
 	  <mt-swipe-item>
-		<a href=""><img :src="arrth[3]"></a>
-		<a href=""><img :src="arrth[4]"></a>
-		<a href=""><img :src="arrth[5]"></a>
+		<router-link :to="{ name: 'Details', params: { id: arrth[3].id }}"><img :src="arrth[3].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[4].id }}"><img :src="arrth[4].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[5].id }}"><img :src="arrth[5].images.large"></router-link>
 	  </mt-swipe-item>
 	  <mt-swipe-item>
-		<a href=""><img :src="arrth[6]"></a>
-		<a href=""><img :src="arrth[7]"></a>
-		<a href=""><img :src="arrth[8]"></a>
+		<router-link :to="{ name: 'Details', params: { id: arrth[6].id }}"><img :src="arrth[6].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[7].id }}"><img :src="arrth[7].images.large"></router-link>
+		<router-link :to="{ name: 'Details', params: { id: arrth[8].id }}"><img :src="arrth[8].images.large"></router-link>
 	  </mt-swipe-item>
-	  
 	</mt-swipe>
 	<!-- <div class="swiper-container">
 	  <div class="swiper-wrapper">
@@ -40,47 +39,39 @@ export default {
   created(){
 		var api  = "../../static/Theater.json"
 		Vue.axios.get(api).then((response) => {
-		  // arrth = response.data.subjects;
-		  // console.log(arrth)
-		  return response.data.subjects;
-		}).then((data)=>{
-			var arr = Array.prototype.slice.call(data);
-			var newArr = []
-			for(var i=0, len=arr.length; i<len; i++){
-				newArr.push(arr[i].images.large);
-			}
-			// newArr = Array.prototype.slice.call(newArr);
-			this.arrth = newArr;
-			// console.log(this.arrth)
+		  this.arrth = Array.prototype.slice.call(response.data.subjects);
+		  // return response.data.subjects;
+		  // return arrth
+		  console.log(this.arrth)
 		})
+		// .then((data)=>{
+		// 	console.log(data)
+		// 	var arr = Array.prototype.slice.call(data);
+		// 	var newArr = []
+		// 	for(var i=0, len=arr.length; i<len; i++){
+		// 		newArr.push(arr[i]);
+		// 	}
+		// 	this.arrth = newArr;
+		// 	console.log(this.arrth)
+		// })
 	},
-  computed: {
-	  evenNumbers: function () {
-	    return this.arrth.filter(function (number) {
-	    	// var len = arrth.length;
-	    	// for()
-	      return number.images;
-	    })
-	  }
-	}
+ //  computed: {
+	//   evenNumbers: function () {
+	//     return this.arrth.filter(function (number) {
+	//     	// var len = arrth.length;
+	//     	// for()
+	//       return number.images;
+	//     })
+	//   }
+	// }
 }
-// window.onload = function(){
-// 	var mySwiper = new Swiper('.swiper-container', {
-// 		autoplay: 1000,//可选选项，自动滑动
-// 		loop : true,
-// 		// slidesPerView : 3,
-// 		// slidesPerGroup : 3,
-// 	})
-// }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 *{margin: 0;padding: 0;}
 #myswipe{
 	width: 100%;
 	height: 3.2rem;
-	/*background: rgba(0,0,0,0.4)*/
 }
 #myswipe .swiper-container {
     width: 100%;
