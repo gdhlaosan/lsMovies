@@ -8,6 +8,7 @@ import Swipe from '@/components/Swipe'
 import Coming from '@/components/Coming'
 import Usbox from '@/components/Usbox'
 import Details from "@/components/Details"
+import Details01 from "@/components/Details01"
 
 
 Vue.use(Router)
@@ -35,7 +36,14 @@ export default new Router({
     {
       path:'/Details/:id',
       name:"Details",
-      component:Details
+      component:Details,
+      children:[
+        {
+          path:"",
+          components:{Header,Details01}
+        }
+
+      ]
     }
   ]
 })
