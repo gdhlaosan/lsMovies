@@ -7,10 +7,9 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in arr">
-          <router-link to="/list">
+          <router-link :to="{name:'Details',params:{id:item.id}}">
             <img :src="item.images.medium">
           </router-link>
-          <!-- <img :src="item.images.medium"> -->
           <p>{{item.title}}</p>
           <p class="smallFont">评分：{{item.rating.average}}分</p>
         </div>
@@ -40,7 +39,7 @@ export default {
         limitarr.push(newData[i]);
       }
       this.arr = limitarr
-     // console.log(this.arr)
+      //console.log(this.arr)
     }).then(()=>{
       var mySwiper = new Swiper('.swiper-container',{
         slidesPerView : 3,

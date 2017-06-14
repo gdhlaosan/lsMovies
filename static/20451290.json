@@ -1,0 +1,99 @@
+{
+    "rating": {
+        "max": 10,
+        "average": 4.8,
+        "stars": "25",
+        "min": 0
+    },
+    "reviews_count": 430,
+    "wish_count": 15088,
+    "douban_site": "",
+    "year": "2017",
+    "images": {
+        "small": "https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2459198108.webp",
+        "large": "https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2459198108.webp",
+        "medium": "https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2459198108.webp"
+    },
+    "alt": "https://movie.douban.com/subject/20451290/",
+    "id": "20451290",
+    "mobile_url": "https://movie.douban.com/subject/20451290/mobile",
+    "title": "新木乃伊",
+    "do_count": null,
+    "share_url": "https://m.douban.com/movie/subject/20451290",
+    "seasons_count": null,
+    "schedule_url": "https://movie.douban.com/subject/20451290/cinema/",
+    "episodes_count": null,
+    "countries": [
+        "美国"
+    ],
+    "genres": [
+        "动作",
+        "奇幻",
+        "冒险"
+    ],
+    "collect_count": 33802,
+    "casts": [
+        {
+            "alt": "https://movie.douban.com/celebrity/1054435/",
+            "avatars": {
+                "small": "https://img1.doubanio.com/img/celebrity/small/567.jpg",
+                "large": "https://img1.doubanio.com/img/celebrity/large/567.jpg",
+                "medium": "https://img1.doubanio.com/img/celebrity/medium/567.jpg"
+            },
+            "name": "汤姆·克鲁斯",
+            "id": "1054435"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1016674/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/17524.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/17524.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/17524.jpg"
+            },
+            "name": "罗素·克劳",
+            "id": "1016674"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1315815/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/33650.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/33650.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/33650.jpg"
+            },
+            "name": "安娜贝拉·沃丽丝",
+            "id": "1315815"
+        },
+        {
+            "alt": "https://movie.douban.com/celebrity/1199057/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/1497234763.82.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/1497234763.82.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/1497234763.82.jpg"
+            },
+            "name": "索菲亚·波多拉",
+            "id": "1199057"
+        }
+    ],
+    "current_season": null,
+    "original_title": "The Mummy",
+    "summary": "新版《木乃伊》讲述了一个全新故事，木乃伊公主阿玛内特穿梭到现代伦敦，企图寻回她曾被夺去的一切。\n本片由动作巨星汤姆·克鲁斯主演。凭借《王牌特工》中的 “刀锋女”一角大热的新锐女星索菲亚·宝特拉饰演有巨大毁灭力量的木乃伊公主阿玛内特，而好莱坞著名硬汉男星罗素·克劳 也有精彩表现。\n导演艾里克斯·库兹曼为好莱坞资深制片人，作品包括《惊天魔盗团》、 《星际迷航：暗黑无界》、《碟中谍3》等。\n据悉，影片将于近日发布全球首支官方预告片，届时将有更多精彩场景呈献，并将揭晓更多神秘剧情。该片北美预计2017年6月9 日上映。",
+    "subtype": "movie",
+    "directors": [
+        {
+            "alt": "https://movie.douban.com/celebrity/1049959/",
+            "avatars": {
+                "small": "https://img3.doubanio.com/img/celebrity/small/25843.jpg",
+                "large": "https://img3.doubanio.com/img/celebrity/large/25843.jpg",
+                "medium": "https://img3.doubanio.com/img/celebrity/medium/25843.jpg"
+            },
+            "name": "艾里克斯·库兹曼",
+            "id": "1049959"
+        }
+    ],
+    "comments_count": 18061,
+    "ratings_count": 32015,
+    "aka": [
+        "盗墓迷城(港)",
+        "神鬼传奇(台)"
+    ]
+}
