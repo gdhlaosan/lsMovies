@@ -10,6 +10,7 @@
           <router-link to="/list">
             <img :src="item.images.medium">
           </router-link>
+          <!-- <img :src="item.images.medium"> -->
           <p>{{item.title}}</p>
           <p class="smallFont">评分：{{item.rating.average}}分</p>
         </div>
@@ -40,13 +41,18 @@ export default {
       }
       this.arr = limitarr
      // console.log(this.arr)
-    })
-     setTimeout(function (argument) {
+    }).then(()=>{
       var mySwiper = new Swiper('.swiper-container',{
         slidesPerView : 3,
         spaceBetween : 10
       })
-    },0)
+    })
+    //  setTimeout(function () {
+    //   var mySwiper = new Swiper('.swiper-container',{
+    //     slidesPerView : 3,
+    //     spaceBetween : 10
+    //   })
+    // },0)
   }
 }
  
@@ -71,7 +77,11 @@ export default {
   color: #666;
 }
 /*#theater .swiper-slide{
-  width:1.88rem; 
+  width:33.333%; 
+}*/
+/*#theater .swiper-slide a{
+  display: inline-block;
+  width: 100%;
 }*/
 #theater .swiper-slide img{
   width: 100%;

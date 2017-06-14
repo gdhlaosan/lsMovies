@@ -39,13 +39,12 @@ export default {
       }
       this.arr = limitarr
      //console.log(this.arr)
-    })
-     setTimeout(function (argument) {
+    }).then(()=>{
       var mySwiper = new Swiper('.swiper-container',{
         slidesPerView : 3,
         spaceBetween : 10,
       })
-    },0)
+    })
   }
 }
  

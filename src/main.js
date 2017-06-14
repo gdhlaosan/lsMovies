@@ -6,6 +6,9 @@ import router from './router'
 import { Header,Search,Cell,Button,Swipe, SwipeItem } from 'mint-ui';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
+
 
 Vue.component(Header.name, Header);
 Vue.component(Cell.name, Cell);
