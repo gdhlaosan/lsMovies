@@ -11,6 +11,7 @@ import Details from "@/components/Details"
 import Details01 from "@/components/Details01"
 import Introduce from "@/components/Introduce"
 import Starman from "@/components/Starman"
+import Comments from "@/components/Comments"
 import More from "@/components/More"
 
 
@@ -42,7 +43,7 @@ export default new Router({
       children:[
         {
           path:"",
-          components:{Header,Details01,Introduce,Starman}
+          components:{Header,Details01,Introduce,Starman,Comments}
         }
 
       ]
