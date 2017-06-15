@@ -24,5 +24,7 @@ export default {
 html{
   font-size: 15.625vw;
 }
-
+a{
+  text-decoration: none;
+}
 </style>
