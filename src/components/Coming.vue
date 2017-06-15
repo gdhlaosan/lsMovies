@@ -25,7 +25,7 @@ export default {
     }
   }, 
   created(){
-    var url  = "../../static/Coming_soon.json"
+    var url  = "../../static/coming_soon.json"
     Vue.axios.get(url).then((response) => {
       // console.log(response.data.subjects)
       return response.data.subjects;

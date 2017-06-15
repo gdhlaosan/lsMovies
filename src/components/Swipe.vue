@@ -38,7 +38,7 @@ export default {
   	}
   },
   created(){
-		var api  = "../../static/Theater.json"
+		var api  = "../../static/in_theaters.json"
 		Vue.axios.get(api).then((response) => {
 		  this.arrth = Array.prototype.slice.call(response.data.subjects);
 		})

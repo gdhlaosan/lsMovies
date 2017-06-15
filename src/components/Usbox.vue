@@ -24,7 +24,7 @@ export default {
     }
   }, 
   created(){
-    var url  = "../../static/Us_box.json"
+    var url  = "../../static/us_box.json"
     //var url = "https://api.douban.com/v2/movie/us_box"
     Vue.axios.get(url).then((response) => {
       // console.log(response.data.subjects)

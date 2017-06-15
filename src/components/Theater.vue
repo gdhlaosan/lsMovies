@@ -28,7 +28,7 @@ export default {
     }
   },
   created(){
-    var url = "../../static/Theater.json"
+    var url = "../../static/in_theaters.json"
     Vue.axios.get(url).then((res) => {
       //console.log(res.data.subjects)
       return res.data.subjects

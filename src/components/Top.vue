@@ -37,7 +37,7 @@ export default {
      //    }) 
     // 和config/index.js 配合解决跨域问题（不推荐，特别不安全且low，建议用后台cros解决跨域）
     // var url = "/v2/movie/top250";
-    var url = "../../static/Top.json"
+    var url = "../../static/top250.json"
     Vue.axios.get(url).then((res) => {
       //console.log(res.data.subjects)
       return res.data.subjects
