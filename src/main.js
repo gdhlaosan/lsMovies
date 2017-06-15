@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { Header,Search,Cell,Button,Swipe, SwipeItem } from 'mint-ui';
+import { Header,Search,Cell,Button,Swipe, SwipeItem, InfiniteScroll } from 'mint-ui';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Swiper from 'swiper'
@@ -16,7 +16,9 @@ Vue.component(Button.name, Button);
 Vue.component(Search.name, Search);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
-Vue.use(VueAxios, axios)
+// Vue.component(InfiniteScroll.name, InfiniteScroll);
+Vue.use(VueAxios, axios);
+Vue.use(InfiniteScroll);
 
 
 
