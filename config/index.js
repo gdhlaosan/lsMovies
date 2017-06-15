@@ -27,7 +27,16 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // 去掉浏览器的同源策略：https://segmentfault.com/q/1010000007337440
+      //   '/v2': {
+      //       target: 'https://api.douban.com/v2',
+      //       changeOrigin: true,
+      //       pathRewrite: {
+      //         '^/v2': ''
+      //       }
+      // }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
