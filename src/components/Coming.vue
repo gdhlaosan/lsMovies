@@ -2,11 +2,11 @@
 <div id="coming">
   <div id="title">
     <h3>即将上映</h3>
-    <h4>更多</h4>
+    <router-link :to="{name:'More',params:{woxiang:'coming_soon'}}"><h4>更多</h4></router-link>
   </div>
   <ul>
     <li v-for="item in arrcoming">
-      <router-link :to="{name:'Details', params:{id:item.id}}"><img :src="item.images.small" :alt="item.alt"></router-link>
+      <router-link :to="{name:'Details', params:{id:item.id}}"><img :src="item.images.small" :alt="item.alt"></router-link> 
       <p>{{ item.title }}</p>
       <!-- 未上映模块，没有评分 -->
       <p class="smallFont">暂无评分</p>
@@ -58,7 +58,7 @@ export default {
 #coming>#title>h3{
   font-size: 0.3rem;
 }
-#coming>#title>h4{
+#coming>#title h4{
   font-size: 0.26rem;
   font-weight: normal;
   color: #666;

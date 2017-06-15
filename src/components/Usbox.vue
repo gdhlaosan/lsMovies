@@ -2,7 +2,7 @@
 <div id="usbox">
   <div id="title">
     <h3>欧美排行榜</h3>
-    <h4>更多</h4>
+    <router-link :to="{name:'More',params:{woxiang:'us_box'}}"><h4>更多</h4></router-link>
   </div>
   <ul>
     <li v-for="item in arrusbox">
@@ -56,7 +56,7 @@ export default {
 #usbox>#title>h3{
   font-size: 0.3rem;
 }
-#usbox>#title>h4{
+#usbox>#title h4{
   font-size: 0.26rem;
   font-weight: normal;
   color: #666;

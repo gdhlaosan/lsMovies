@@ -2,7 +2,7 @@
  <div id="theater">
     <div id="title">
       <h3>影院热映</h3>
-      <h4>更多</h4>
+      <router-link :to="{name:'More',params:{woxiang:'in_theaters'}}"><h4>更多</h4></router-link>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
