@@ -2,12 +2,14 @@
  <div id="top">
     <div id="title">
       <h3>TOP250</h3>
-      <h4>更多</h4>
+      <router-link :to="{name:'More',params:{woxiang:'top250'}}"><h4>更多</h4></router-link>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in arr">
-          <router-link :to="{name:'Details',params:{id:item.id}}"><img :src="item.images.large"></router-link>
+          <router-link :to="{name:'Details',params:{id:item.id}}">
+            <img v-if="item.images!=null" :src="item.images.large">
+          </router-link>
           <p>{{item.title}}</p>
           <p class="smallFont">评分：{{item.rating.average}}分</p>
         </div>
@@ -19,6 +21,8 @@
 
 <script>
 import Vue from 'vue'
+import jsonp from 'jsonp'
+import Swiper from 'swiper'
 export default {
   name: 'Theaters',
   data(){
@@ -27,6 +31,12 @@ export default {
     }
   },
   created(){
+     // var mySwiper1 = new Swiper('.swiper-container1',{
+     //      slidesPerView : 3,
+     //      spaceBetween : 10,
+     //    }) 
+    // 和config/index.js 配合解决跨域问题（不推荐，特别不安全且low，建议用后台cros解决跨域）
+    // var url = "/v2/movie/top250";
     var url = "../../static/Top.json"
     Vue.axios.get(url).then((res) => {
       //console.log(res.data.subjects)
@@ -39,15 +49,33 @@ export default {
       }
       this.arr = limitarr
      // console.log(this.arr)
-    }).then(()=>{
+    }).then(()=>{ 
       var mySwiper = new Swiper('.swiper-container',{
         slidesPerView : 3,
         spaceBetween : 10,
       })
     })
+
+    // 跨域写法
+    // var url = "https://api.douban.com/v2/movie/top250"
+    // new Promise((resolve, reject)=> {
+    //   jsonp(url,null,(err,data)=>{
+    //     if(err){
+    //       console.error(err.message);
+    //     }else{
+    //       // console.log(data.subjects);
+    //       this.arr = data.subjects;
+    //     }
+    //   })
+    // }).then(()=>{
+    //   var mySwiper = new Swiper('.swiper-container',{
+    //     slidesPerView : 3,
+    //     spaceBetween : 10,
+    //   })
+    // })
   }
 }
- 
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -88,7 +116,7 @@ export default {
   color: gray;
 }
 #bottom{
-  font-size: 0.1rem;
+  font-size: 0.2rem;
   text-align: center;
   width: 100%;
   color: #dcdcdc;
