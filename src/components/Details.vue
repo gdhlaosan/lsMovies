@@ -19,25 +19,25 @@ export default {
   },
   created(){
     this.id = this.$route.params.id;
-    var url = "https://api.douban.com/v2/movie/subject/"+this.id;
-    //var url = "../../static/20451290.json"
+    //var url = "https://api.douban.com/v2/movie/subject/"+this.id;
+    var url = "../../static/20451290.json"
     //console.log(url)
-    jsonp(url,null,(err,data)=>{
-      if(err){
-        console.error(err.message);
-      }else{
-       console.log(data)
-       this.obj = data;
-       //console.log(this.obj)  
-      }
-    })
-    // Vue.axios.get(url).then((res) => {
-    //   //console.log(res.data) 
-    //   return res.data
-    // }).then((data)=>{
-    //   console.log(data)
-    //   this.obj = data
+    // jsonp(url,null,(err,data)=>{
+    //   if(err){
+    //     console.error(err.message);
+    //   }else{
+    //    console.log(data)
+    //    this.obj = data;
+    //    //console.log(this.obj)  
+    //   }
     // })
+    Vue.axios.get(url).then((res)=>{
+      //console.log(res.data) 
+      return res.data
+    }).then((data)=>{
+      console.log(data)
+      this.obj = data
+    })
   }
 }
 

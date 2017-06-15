@@ -10,13 +10,12 @@
 
 <script>
 import Vue from 'vue'
-import jsonp from 'jsonp'
 export default {
   props:["passData"],
   name: 'Introduce',
   methods:{
     open:function(){
-      
+
       var p = document.getElementById("open")
       p.style.overflow = "inherit";
       p.children[1].style.display = "none"

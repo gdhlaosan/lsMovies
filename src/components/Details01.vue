@@ -1,12 +1,12 @@
 <template>
   <div id="Dbox01">
       <div class="left">
-        <img :src="passData.images.medium">
+        <img v-if="passData.images!=null" :src="passData.images.medium">
       </div>
       <div class="right">
         <p>{{passData.title}}</p>
-        <p>评分：{{passData.rating.average}}分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{passData.collect_count}}人评价</p>
-        <p>上映时间：{{passData.year}}年&nbsp;&nbsp;&nbsp; {{passData.countries[0]}}</p>
+        <p v-if="passData.rating!=null">评分：{{passData.rating.average}}分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{passData.collect_count}}人评价</p>
+        <p v-if="passData.countries!=null">上映时间：{{passData.year}}年&nbsp;&nbsp;&nbsp; {{passData.countries[0]}}</p>
         <p>分类：<span v-for="item in passData.genres">{{item}}&nbsp;&nbsp;  </span></p>
         <p>别名：<span v-for="item in passData.aka">{{item}}&nbsp;&nbsp; </span></p>
       </div>
