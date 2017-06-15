@@ -1,20 +1,22 @@
 <template>
  <div id="more">
-    MORE
+ 	<router-view name="Header"></router-view>
+	<router-view name="Morebody"></router-view>
  </div>
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from 'vue';
+// import InfiniteScroll from 'InfiniteScroll';
 export default {
   name: 'More',
   data(){
     return {
-      arr:""
+    	arr:""
     }
   }
 }
- 
+
 </script>
 
 <style>
