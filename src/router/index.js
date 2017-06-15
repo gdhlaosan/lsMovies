@@ -10,6 +10,7 @@ import Usbox from '@/components/Usbox'
 import Details from "@/components/Details"
 import Details01 from "@/components/Details01"
 import Introduce from "@/components/Introduce"
+import More from "@/components/More"
 
 
 Vue.use(Router)
@@ -26,7 +27,6 @@ export default new Router({
       	"Coming":Coming,
       	"Usbox":Usbox,
       	"Details":Details
-
       }
     },
     {
@@ -45,6 +45,11 @@ export default new Router({
         }
 
       ]
+    },
+    {
+    	path:'/More/:woxiang',
+    	name:"More",
+    	component:More
     }
   ]
 })
