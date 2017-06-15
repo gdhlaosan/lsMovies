@@ -20,7 +20,7 @@ Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.use(VueAxios, axios)
 Vue.use(InfiniteScroll);
-Vue.use(InfiniteScroll);
+Vue.component(Popup.name, Popup);
 
 
 
