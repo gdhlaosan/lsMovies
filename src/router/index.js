@@ -13,6 +13,7 @@ import Introduce from "@/components/Introduce"
 import Starman from "@/components/Starman"
 import Comments from "@/components/Comments"
 import More from "@/components/More"
+import Morebody from "@/components/Morebody"
 
 
 Vue.use(Router)
@@ -51,7 +52,13 @@ export default new Router({
     {
     	path:'/More/:woxiang',
     	name:"More",
-    	component:More
+    	component:More,
+    	children:[
+    		{
+    			path:"",
+    			components:{Header,Morebody}
+    		}
+    	]
     }
   ]
 })
