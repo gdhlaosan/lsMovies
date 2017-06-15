@@ -3,12 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { Header,Search,Cell,Button,Swipe, SwipeItem } from 'mint-ui';
+import { Header,Search,Cell,Button,Swipe, SwipeItem,InfiniteScroll,Popup } from 'mint-ui';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import '../static/iconfont/iconfont.css'
+
 
 
 Vue.component(Header.name, Header);
@@ -18,6 +19,8 @@ Vue.component(Search.name, Search);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.use(VueAxios, axios)
+Vue.use(InfiniteScroll);
+Vue.use(InfiniteScroll);
 
 
 
