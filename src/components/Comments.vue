@@ -24,13 +24,19 @@
            </div>
          </li>
        </ul>
-       <!-- <div id="pag">
+       <div id="pag">
          <ol>
-           <li v-if="obj.interests!=null" v-for="item in obj.interests.length">1</li>
+           <li @click="prevPage">上一页</li>
+           <li @click="nextPage">下一页</li>
          </ol>
-       </div> -->
+       </div>
+     </div>
+     <div id="footer">
+        <p>免注册，免费用，随便查</p>
+        <p>版权所有&copy;<span>quying.com</span></p>
      </div>
   </div>
+
 </template>
 
 <script>
@@ -42,25 +48,57 @@ export default {
   data(){
     return {
       obj:"",
+      num:0,
       flag:false
     }
   },
-  methods:{
-    popup(){
-      this.flag = !this.flag;
-    }
-  },
   created(){
-    var url = "https://m.douban.com/rexxar/api/v2/movie/"+this.passId+"/interests?count=100000"
-    //var url = 
+    var url = "https://m.douban.com/rexxar/api/v2/movie/"+this.passId+"/interests?count=10&start=0"
     jsonp(url,null,(err,data)=>{
       if(err){
         console.error(err.message);
       }else{
-       console.log(data)
+       //console.log(data)
        this.obj = data; 
       }
     })
+  },
+  methods:{
+    popup(){
+      this.flag = !this.flag;
+    },
+    prevPage(){
+      if(this.num>0){
+        this.num-=10;
+        document.getElementById("comments").scrollIntoView();
+      }else{
+        this.num = 0;
+
+      }  
+      var url = "https://m.douban.com/rexxar/api/v2/movie/"+this.passId+"/interests?count=10&start="+this.num
+      jsonp(url,null,(err,data)=>{
+        if(err){
+          console.error(err.message);
+        }else{
+        // console.log(data)
+         this.obj = data; 
+        }
+      }) 
+      
+    },
+    nextPage(){
+      this.num += 10;    
+      var url = "https://m.douban.com/rexxar/api/v2/movie/"+this.passId+"/interests?count=10&start="+this.num
+      jsonp(url,null,(err,data)=>{
+        if(err){
+          console.error(err.message);
+        }else{
+         //console.log(data)
+         this.obj = data; 
+        }
+      })
+      document.getElementById("comments").scrollIntoView();
+    }
   }
 }
 
@@ -127,5 +165,29 @@ export default {
 #contents .content p:nth-child(2) .icon-eclips-horizonal-copy{
   font-size: 0.5rem;
   color: #666;
+}
+#pag{
+  font-size: .3rem;
+  padding-top: .2rem;
+}
+#pag ol{
+  display: flex;
+  justify-content: space-around;
+}
+#pag ol li{
+  height: .5rem;
+  width: 1.3rem;
+  text-align: center;
+  line-height: .5rem;
+  list-style: none;
+  border: 1px solid #999;
+}
+#footer{
+  padding: 1.5rem 0;
+}
+#footer p{
+  font-size: .2rem;
+  text-align: center;
+  color: #999;
 }
 </style>
