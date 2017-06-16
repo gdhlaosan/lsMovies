@@ -60,6 +60,7 @@ export default {
   height: 0.88rem;
   position: relative;
   z-index: 100;
+  text-overflow: hidden;
 }
 .header .mint-header{
   height: 0.88rem;
@@ -74,6 +75,7 @@ export default {
 .header>button:first-child,
 .header>div:first-child{
   height: 0.88rem;
+  line-height: 0.88rem;
   background: #333;
   color: white;
   /*margin-top: -.5rem;*/
@@ -82,8 +84,20 @@ export default {
   box-shadow: none;
 }
 .header>div:first-child{  
-  top: -0.24rem;
+  /*top: -0.24rem;*/
   left: 0.1rem;
-  color: white;
+}
+.header .mint-button{
+  height: 1rem;
+  line-height: 1rem;
+  /*display: block;*/
+}
+.header .mint-button-icon{
+  height: 1rem;
+  width: 1rem;
+  display: block;
+}
+.header .mint-button-icon i:before {
+  font-size: 0.4rem;
 }
 </style>
