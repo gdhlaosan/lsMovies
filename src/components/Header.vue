@@ -21,7 +21,7 @@ export default {
     }
   },
   created(){
-    console.log(this.$route.path)
+    // console.log(this.$route.path)
     if(this.$route.path=="/"){
       this.flag = false;
     }
@@ -59,8 +59,8 @@ export default {
   background: #333;
   color: white;
   /*margin-top: -.5rem;*/
-  position: relative;
-  top: -0.5rem;
+  position: fixed;
+  /*top: -0.5rem;*/
   z-index: 1000;
   box-shadow: none;
 }
