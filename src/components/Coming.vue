@@ -57,11 +57,18 @@ export default {
 }
 #coming>#title>h3{
   font-size: 0.3rem;
+  color: #717071;
 }
 #coming>#title h4{
-  font-size: 0.26rem;
+  width: .7rem;
+  height: .32rem;
+  background: rgb(195,13,35);
+  font-size: 0.14rem;
+  color: white;
+  text-align: center;
+  line-height: .32rem;
   font-weight: normal;
-  color: #666;
+  border-radius: .12rem; /*慧君说这个好看，不准改*/
 }
 #coming>ul{
   display: flex;

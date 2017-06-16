@@ -1,9 +1,8 @@
 <template>
   <div id="search">
   	<div id="SearchBox">
-	  	<mt-search v-model="value" cancel-text="取消" placeholder="搜索"></mt-search>
+	  	<mt-search v-model="value" cancel-text="取消" placeholder="搜索" :result.sync="result"></mt-search>
   	</div>
-
   </div>
 </template>
 
@@ -14,7 +13,8 @@ export default {
   	return {
   		value:""
   	}
-  }
+  },
+  
 }
 </script>
 
