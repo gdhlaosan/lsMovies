@@ -17,7 +17,7 @@ export default {
     open:function(){
 
       var p = document.getElementById("open")
-      p.style.overflow = "inherit";
+      p.style.height = "auto";
       p.children[1].style.display = "none"
     }
   }

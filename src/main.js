@@ -10,8 +10,6 @@ import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import '../static/iconfont/iconfont.css'
 
-
-
 Vue.component(Header.name, Header);
 Vue.component(Cell.name, Cell);
 Vue.component(Button.name, Button);

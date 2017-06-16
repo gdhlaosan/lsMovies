@@ -31,9 +31,10 @@ export default {
   justify-content: space-between;
   background: #dcdcdc;
 }
-/*#Dbox01 .left{
-  float: left;
-}*/
+#Dbox01 #left img{
+  height: 3rem;
+  width: 2rem;
+}
 #Dbox01 .right{
   width: 60%;
   padding-right: 0.2rem;

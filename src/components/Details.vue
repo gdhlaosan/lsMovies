@@ -3,6 +3,8 @@
     <router-view name="Header"></router-view>
     <router-view name="Details01" :pass-data="obj"></router-view>
     <router-view name="Introduce" :pass-data="obj"></router-view>
+    <router-view name="Starman" :pass-data="obj"></router-view>
+    <router-view name="Comments" :pass-id="id" :pass-obj="obj"></router-view>
 </div>
 </template>
 
@@ -35,7 +37,7 @@ export default {
       //console.log(res.data) 
       return res.data
     }).then((data)=>{
-      console.log(data)
+     //console.log(data)
       this.obj = data
     })
   }
