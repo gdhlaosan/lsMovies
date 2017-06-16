@@ -1,7 +1,8 @@
 <template>
   <div id="search">
   	<div id="SearchBox">
-	  	<mt-search :value.sync="value" cancel-text="取消" placeholder="搜索">
+	  	<mt-search v-model="value" cancel-text="取消" placeholder="搜索">
+        <mt-cell v-for="item in result" :title="item.title"></mt-cell>
       </mt-search>
   	</div>
    <!--  <button @click="get">炸了</button>  -->
@@ -19,15 +20,15 @@ export default {
       value:""
   	}
   },
-  updated(){
-    //var url = "../../static/search.json"
+  created(){
+    var url = "../../static/search.json"
     //var url = "https://api.douban.com/v2/movie/search?q="+this.value
-    // Vue.axios.get(url).then((res) => {
-    //   return res.data.subjects
-    // }).then((data)=>{
-    //   this.result = data;
-    //   console.log(this.result)
-    // })
+    Vue.axios.get(url).then((res) => {
+      return res.data.subjects
+    }).then((data)=>{
+      this.result = data;
+      console.log(this.result)
+    })
     // jsonp(url,null,(err,data)=>{
     //   if(err){
     //     console.error(err.message);
