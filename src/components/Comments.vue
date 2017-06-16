@@ -33,7 +33,7 @@
      </div>
      <div id="footer">
         <p>免注册，免费用，随便查</p>
-        <p>版权所有&copy;<span>quying.com</span></p>
+        <p>版权所有&copy;<span>siting.com</span></p>
      </div>
   </div>
 
@@ -183,7 +183,7 @@ export default {
   border: 1px solid #999;
 }
 #footer{
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 .5rem 0;
 }
 #footer p{
   font-size: .2rem;
