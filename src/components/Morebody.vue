@@ -46,10 +46,10 @@ export default {
    //    }else{
    //     console.log(data)
    //     this.woxiang = data;
-   //     //console.log(this.obj)  
+   //     //console.log(this.obj)		
    //    }
    //  })
-   Vue.axios.get(url).then((res)=>{
+    Vue.axios.get(url).then((res)=>{
       //console.log(res.data) 
       return res.data
     }).then((data)=>{
@@ -101,6 +101,7 @@ export default {
 	border-bottom: none;
 }
 #morebody>a>img{
+	border: 1px solid gray;
 	width: 1.5rem;
 	height: 2.25rem;
 }
