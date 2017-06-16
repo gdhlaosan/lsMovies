@@ -3,7 +3,7 @@
     <mt-button icon="back" @click="routerGo" v-if="flag"></mt-button>
     <div v-else>
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 200 200" width="40" height="40">
+      viewBox="0 0 200 200" width="0.8rem" height="0.8rem">
         <g xmlns="http://www.w3.org/2000/svg" id="svg-content">
           <g transform="matrix(0.70,0,0,0.70,30,40)">
             <g id="XMLID_349_">
