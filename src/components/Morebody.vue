@@ -5,7 +5,7 @@
 		<div class="listRight">
 			<p class="title">{{ item.title }}</p>
 			<p class="rating">
-				评分：<span>{{ item.rating.average }}</span>
+				评分：<span>{{ item.rating.average }} 分</span>
 				<span>{{ item.collect_count }}</span>人评价
 			</p>
 			<p class="directors">
@@ -40,7 +40,7 @@ export default {
   },
   created(){
   	var url = "../../static/"+this.$route.params.woxiang+".json";
-  	// jsonp(url,null,(err,data)=>{
+   // jsonp(url,null,(err,data)=>{
    //    if(err){
    //      console.error(err.message);
    //    }else{
@@ -54,14 +54,14 @@ export default {
       return res.data
     }).then((data)=>{
       if(this.$route.params.woxiang == "us_box"){
-      	for(var i=0,len=data.subjects;i<len;i++){
-      		this.woxiang.push(data.subjects[i])
+      	for(var i=0,len=data.subjects.length;i<len;i++){
+      		this.woxiang.push(data.subjects[i].subject)
       	}
-      	// this.woxiang = data.subjects;
       	// alert(this.$route.params.woxiang)
       	console.log(this.woxiang)
+      }else{
+	      this.woxiang = data.subjects;
       }
-      this.woxiang = data.subjects;
       for(var i=0,len=this.woxiang.length;i<len;i++){
       	this.list.push(this.woxiang[i])
       }
