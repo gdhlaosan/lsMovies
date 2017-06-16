@@ -58,14 +58,14 @@ export default {
       		this.woxiang.push(data.subjects[i].subject)
       	}
       	// alert(this.$route.params.woxiang)
-      	console.log(this.woxiang)
+      	// console.log(this.woxiang)
       }else{
 	      this.woxiang = data.subjects;
       }
       for(var i=0,len=this.woxiang.length;i<len;i++){
       	this.list.push(this.woxiang[i])
       }
-      console.log(this.list)
+      // console.log(this.list)
     })
   },
   methods:{	
