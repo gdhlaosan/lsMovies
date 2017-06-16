@@ -20,8 +20,8 @@
       </svg>        
     </div>
     <mt-header fixed title="影趣儿">
-    	<router-link to="/Search" slot="right">
-    		<mt-button icon="search"></mt-button>
+    	<router-link to="/Search" slot="right" v-if="flager">
+    		<mt-button icon="search" ></mt-button>
     	</router-link>
     </mt-header>
   </div>
@@ -33,13 +33,17 @@ export default {
   name: 'Header',
   data(){
     return {
-      flag:true
+      flag:true,
+      flager:true
     }
   },
   created(){
     // console.log(this.$route.path)
     if(this.$route.path=="/"){
       this.flag = false;
+    }
+    if(this.$route.path=="/Search"){
+      this.flager = false;
     }
   },
   methods:{
@@ -67,7 +71,7 @@ export default {
   font-size: 0.5rem;
   font-family: cursive;
   background: #333;
-  
+  padding: 0;
 }
 .mint-header-title{
   font-weight: bolder;
@@ -99,5 +103,8 @@ export default {
 }
 .header .mint-button-icon i:before {
   font-size: 0.4rem;
+}
+.mint-button--normal{
+  padding: 0;
 }
 </style>

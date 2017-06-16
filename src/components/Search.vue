@@ -1,5 +1,6 @@
 <template>
   <div id="search">
+    <router-view name="Header"></router-view>
   	<div id="SearchBox">
 	  	<mt-search v-model="value" cancel-text="取消" placeholder="搜索">
         <mt-cell v-for="item in result" :title="item.title"></mt-cell>
